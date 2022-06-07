@@ -1,0 +1,222 @@
+/* 
+    Кольори сайту: 
+        основний колір тексту - #757575;
+        другорядний колір тексту - #212121;
+        третій колір тексту - rgba(255, 255, 255, 0.6);
+        колір акценту - #2196F3;
+        білий колір (четвертий для тексту) - #FFFFFF;
+        основний колір фону - #2F303A;
+        другорядний коір фону - #F5F4FA;
+        колір для ховера кнопки - #188CE8;
+        колір неактивних кнопок - #F5F4FA;
+
+    Жирність тексту:
+        regular - 400;
+        medium - 500;
+        bold - 700;
+        black - 900;
+
+*/
+
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --logo-text-color: #000000;
+    --third-text-color: rgba(255, 255, 255, 0.6);
+    --accent-color: #2196F3;
+    --main-background-color: #2F303A;
+    --secondary-background-color: #F5F4FA; 
+    --fourth-text-color: #FFFFFF;
+    --btn-hover-color: #188CE8;
+    --inactive-btn-color: #F5F4FA;
+
+    --regular-weight-text: 400;
+    --medium-weight-text: 500;
+    --bold-weight-text: 700;
+    --black-weight-text: 900;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Шапка сайту */
+
+.logo {
+    font-family: 'Raleway', sans-serif;;
+    color: var(--accent-color);
+    font-weight: var(--bold-weight-text);
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+.logo > .logo-black-color {
+    color: var(--logo-text-color);
+}
+
+.navigation-list  .link {
+    color: var(--title-text-color);
+    font-weight: var(--medium-weight-text);
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+.navigation-list .link:hover,
+.navigation-list .link:focus {
+    color: var(--accent-color);
+}
+.link.active {
+    color: var(--accent-color);
+}
+
+.contact-list .link {
+    color: var(--primary-text-color);
+    font-weight: var(--medium-weight-text);
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+.contact-list .link:hover,
+.contact-list .link:focus {
+    color: var(--accent-color);
+}
+
+/* Сторінка index.html */
+
+/* Розділ Герой */
+.hero {
+    background-color: var(--main-background-color);
+}
+
+.hero-title {
+    color: var(--fourth-text-color);
+    font-weight: var(--black-weight-text);
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.hero-btn {
+    background-color: var(--accent-color);
+    color: var(--fourth-text-color);
+    font-family: inherit;
+    font-weight: var(--bold-weight-text);
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+.hero-btn:hover {
+    background-color: var(--btn-hover-color);
+    cursor: pointer;
+}
+
+/* Розділ особливостей */
+.title {
+    color: var(--title-text-color);
+}
+
+.title.section-title {
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.features-subtitle {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.features-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+/* Розділ "Наша команда" */
+.team-subtitle {
+    font-weight: var(--medium-weight-text);
+    font-size: 16px;
+}
+
+.team-subtitle,
+.team-text {
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+/* Заключна частина всієї сторінки(footer) */
+.footer {
+    background-color: var(--main-background-color);
+}
+
+.logo>.logo-white-color {
+    color: var(--fourth-text-color);
+}
+
+.address-link {
+    color: var(--fourth-text-color);
+    font-weight: var(--regular-weight-text);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+.address-link:hover {
+    color: var(--accent-color);
+}
+
+.address-contact-list .link {
+    color: var(--third-text-color);
+    font-style: normal;
+}
+
+
+/* Cторінка portfolio.html */
+
+.filters-btn {
+    background-color: var(--inactive-btn-color);
+    color: var(--title-text-color);
+    font-family: inherit;
+    font-weight: var(--medium-weight-text);
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+.filters-btn:hover,
+.filters-btn:focus {
+    color: var(--fourth-text-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+.filters-btn.btn-color {
+    color: var(--fourth-text-color);
+    background-color: var(--accent-color);
+}
+
+.portfolio-subtitle {
+    font-weight: var(--bold-weight-text);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.portfolio-text {
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+}
