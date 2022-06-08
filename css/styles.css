@@ -24,6 +24,8 @@
 
     Розмір відступів:
         обнулення - 0px;
+        мінусовий відступ для карток - (-15px);
+        додатній відступ для карток - 15px;
 */
 
 :root {
@@ -52,6 +54,8 @@
 
     /* Відступи */
     --zeroing-indents: 0px;
+    --negative-card-indent: -15px;
+    --positive-card-indent: 15px;
 }
 
 body {
@@ -169,6 +173,9 @@ ul {
 /* Розділ Герой */
 .hero {
     background-color: var(--main-background-color);
+    padding-top: 200px;
+    padding-bottom: 200px;
+
     text-align: center;
 }
 
@@ -179,7 +186,10 @@ ul {
 
 .hero-title {
     margin-top: var(--zeroing-indents);
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 30px;
+    max-width: 650px;
 
     color: var(--fourth-text-color);
     font-weight: var(--black-weight-text);
@@ -269,10 +279,18 @@ ul {
 
 .portfolio-list {
     display: flex;
-    justify-content: space-between;
-    margin-top: var(--zeroing-indents);
-    margin-bottom: var(--zeroing-indents);
+    margin-top: var(--negative-card-indent);
+    margin-right: var(--negative-card-indent);
+    margin-bottom: var(--negative-card-indent);
+    margin-left: var(--negative-card-indent);
     padding-left: var(--zeroing-indents);
+}
+
+.portfolio-list > .item {
+    margin-top: var(--positive-card-indent);
+    margin-right: var(--positive-card-indent);
+    margin-bottom: var(--positive-card-indent);
+    margin-left: var(--positive-card-indent);
 }
 
 /* Розділ "Наша команда" */
@@ -282,28 +300,37 @@ ul {
 
 .team-list {
     display: flex;
-    justify-content: space-between;
+    margin-top: var(--negative-card-indent);
+    margin-right: var(--negative-card-indent);
+    margin-bottom: var(--negative-card-indent);
+    margin-left: var(--negative-card-indent);
     margin-top: var(--zeroing-indents);
     margin-bottom: var(--zeroing-indents);
     padding-left: var(--zeroing-indents);
 }
 
 .team-list > .item {
+    margin-top: var(--positive-card-indent);
+    margin-right: var(--positive-card-indent);
+    margin-bottom: var(--positive-card-indent);
+    margin-left: var(--positive-card-indent);
+}
+
+.team-article {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2),
                 0 1px 1px rgba(0, 0, 0, 0.14),
                 0 1px 3px rgba(0, 0, 0, 0.12);
-}
 
-.team-list .img-nt-indent {
-    margin-bottom: 30px;
-}
-
-.team-article {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 30px;
+   
+
+    text-align: center;
+    background-color: var(--fourth-text-color);
 }
 
 .team-subtitle,
@@ -421,12 +448,18 @@ ul {
 .cards-list {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
+    margin-top: var(--negative-card-indent);
+    margin-right: var(--negative-card-indent);
+    margin-bottom: var(--negative-card-indent);
+    margin-left: var(--negative-card-indent);
     padding-left: var(--zeroing-indents);
 }
 
 .cards-list > .item {
-    margin: 15px;
+    margin-top: var(--positive-card-indent);
+    margin-right: var(--positive-card-indent);
+    margin-bottom: var(--positive-card-indent);
+    margin-left: var(--positive-card-indent);
 }
 
 .item-article {
